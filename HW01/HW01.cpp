@@ -10,8 +10,8 @@ int addFunc(vector<int> v){
     return val;
 }
 //벡터 안의 값들의 평균을 구하는 함수
-int avgFunc(vector<int> v){
-    int val = addFunc(v)/v.size();
+double avgFunc(vector<int> v){
+    double val = (double)addFunc(v)/v.size();
 
     return val;
 }
@@ -62,7 +62,8 @@ void sortFunc(vector<int>& v, int command){
 int main(){
     //변수 선언
     vector<int> v;
-    int x, n, c, add=0, avg=0;
+    int x, n, c, add=0;
+    double avg=0;
     //입력
     cout << "벡터의 크기 N값을 입력해주세요: ";
     cin >> n;
@@ -72,7 +73,7 @@ int main(){
         add+=x;
         v.push_back(x);
     }
-    avg+=add/v.size();
+    avg+=(double)add/v.size();
     cout << "정렬하고 싶은 방식을 입력해주세요 (1: 오름차순, 2: 내림차순): ";
     cin >> c;
 
